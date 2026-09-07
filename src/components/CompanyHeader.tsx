@@ -12,22 +12,26 @@ export default function CompanyHeader() {
     );
 }
 
-const styles =StyleSheet.create({
-    header: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    logo: {
-        width: 120,
-        height: 120,
-        borderRadius: 60,
-    },
-    title: {
-        marginTop: 16,
-        fontSize: 20,
-        fontWeight: 'bold',
-        color: '#444',
-        textAlign: 'center',
-    },
-})
+const styles = StyleSheet.create({
+  header: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
+  logo: {
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    borderWidth: 3,
+    borderColor: '#00E676',
+  },
+
+  title: {
+    marginTop: 16,
+    fontSize: 21,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
+    textAlign: 'center',
+  },
+});

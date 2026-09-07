@@ -16,29 +16,62 @@ const EMPLEADOS = [
     },
 ];
 
-export default function EmployeList(){
-    return(
-        <View>
-            <Text> Directorio de Empleados</Text>
+export default function EmployeList() {
+    return (
+        <View style={styles.container}>
+
+            <Text style={styles.title}>
+                Directorio de Empleados
+            </Text>
+
             <TextInput
+                style={styles.search}
                 placeholder="Buscar Empleado..."
-                placeholderTextColor= '#999'
+                placeholderTextColor="#777"
             />
+
             <FlatList
                 data={EMPLEADOS}
-                keyExtractor={(item)=> item.id}
-                renderItem={({item})=>(
-
+                keyExtractor={(item) => item.id}
+                showsVerticalScrollIndicator={false}
+                renderItem={({ item }) => (
                     <View>
                         <ProfileCard
                             nombres={item.nombre}
                             cargo={item.cargo}
-                            imagen={{uri: item.fotoUrl}}
+                            imagen={{ uri: item.fotoUrl }}
                         />
                     </View>
-
                 )}
             />
+
         </View>
-    )
+    );
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: '#0A0A0A',
+        paddingHorizontal: 16,
+        paddingTop: 20,
+    },
+
+    title: {
+        fontSize: 22,
+        fontWeight: 'bold',
+        color: '#FFFFFF',
+        marginBottom: 15,
+    },
+
+    search: {
+        height: 48,
+        backgroundColor: '#151515',
+        borderRadius: 12,
+        paddingHorizontal: 16,
+        color: '#FFFFFF',
+        borderWidth: 1,
+        borderColor: '#00E676',
+        marginBottom: 15,
+    }
+});
