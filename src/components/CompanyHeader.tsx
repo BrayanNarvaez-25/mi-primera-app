@@ -4,7 +4,7 @@ export default function CompanyHeader() {
     return (
         <View style={styles.header}>
             <Image
-                source={require('../assets/logo.png')}
+                source={require('../assest/img/logo.png')}
                 style={styles.logo}
             />
             <Text style={styles.title}>Programando tus sueños</Text>
